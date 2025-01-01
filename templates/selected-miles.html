@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Automotive AI</title>
+    <!-- Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Responsive Website Design, landing page, Portfolio, Business, E-commerce">
+    <meta name="description" content="Responsive Website Design & Development">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="rebots" content="index, archive">
+    <link rel="canonical" href="https://www.example.com">
+    <!-- Google Fonts -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loaders">
+        <div class="loader"></div>
+    </div>
+    <!-- loader -->
+
+    <!-- header -->
+    <header class="header-area">
+        <div class="containers">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navigation">
+                        <nav class="navbar navbar-expand-xl">
+                            <div class="container-fluid  p-0">
+                                <a class="navbar-brand" href="/index"><img class="img-fluid"
+                                        src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo"></a>
+                                <div class="location">
+                                    <p><i class="bi bi-geo-alt-fill"></i> Kansas City </p>
+                                    <input type="text" class="form-control" placeholder="Zip Code">
+                                </div>
+
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon mobilebtn"><i class="bi bi-text-right"></i> </span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul id="main-menu" class="navbar-nav me-auto sm sm-simple">
+                                        <li><a href="/login">Sign up / Log in</a></li>
+                                        <li><a href="#" class="dealerslog">Dealers Log in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+
+
+    <!-- main-content -->
+    <main class="main-content">
+
+        <!-- search-area -->
+        <section class="search-area">
+            <div class="containers">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-10 col-xl-10">
+                        <div class="title">
+                            <p>Your Car Shopping AI Assistant </p>
+                            <h1>What <span>Miles</span> Are You Looking For?</h1>
+                        </div>
+
+
+                        <div class="prompt-clearbtn">
+                            <button>Clear</button>
+                        </div>
+
+                        <!-- text-prompt -->
+                        <div class="text-prompt">
+
+                            <textarea class="form-control" rows="4"
+                                placeholder="Write here what car do you want? "></textarea>
+
+                            <!-- <div class="showmore " v-if="prompt.length> 800">
+                                <button>Show more <i class="bi bi-chevron-down"></i></button>
+                            </div> -->
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10">
+
+                                    <div class="pricerage">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="min_price1">
+                                            <span class="doller1">Mi</span>
+                                        </div>
+
+                                        <div id="slider-range1" class="price-filter-range"></div>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="max_price1">
+                                            <span class="doller2">Mi</span>
+                                        </div>
+                                        <button class="tick-button">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-sm-12 col-md-2">
+                                    <div class="voice">
+                                        <button><i class="bi bi-mic-fill"></i></button>
+                                        <button class="ups"><i class="bi bi-arrow-up-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- text-prompt -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- search-area -->
+
+
+
+
+        <!-- search-results -->
+        <section class="search-results">
+            <div class="containers">
+                <div class="row g-3">
+                    {% if cars|length > 0 %}
+                    {% for car in cars %}
+                    {% if car.image_link %}
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="carcard">
+                            <div class="carimg">
+                                <a href="/vdp/{{ car.id }}">
+                                    <img src="{{ car.image_link }}" alt="Car image">
+                                </a>
+                            </div>
+                            <div class="carcon">
+                                <h2>
+                                    <a href="/vdp/{{ car.id }}">Car Details</a>
+                                </h2>
+                                <p>{{ car.mileage }} mi
+                                    <label class="chexck">Compare
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="carprice">
+                                <h3>${{ car.price }}</h3>
+                                <a href="/vdp/{{ car.id }}"><i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-12">
+                        <p style="font-size: 1.2rem; color: red; text-align: center; font-weight: bold;">No Cars Found
+                        </p>
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+        </section>
+        <!-- search-results -->
+
+        <!-- compare-box -->
+        <section class="compare-area">
+            <div class="comparebox">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <div class="comcarimg">
+                            <button class="x"><i class="bi bi-x-circle"></i></button>
+                            <img src="{{ url_for('static', filename='img/ash-car.png') }}" alt="ash-car">
+                        </div>
+                        <div class="comcarimg">
+                            <button class="x"><i class="bi bi-x-circle"></i></button>
+                            <img src="{{ url_for('static', filename='img/ash-car.png') }}" alt="ash-car">
+                        </div>
+                        <div class="comcarimg">
+                            <button class="x"><i class="bi bi-x-circle"></i></button>
+                            <img src="{{ url_for('static', filename='img/ash-car.png') }}" alt="ash-car">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="comparebtn">
+                            <button class="delt">Delete all</button>
+                            <a href="/compare" class="cusbtn">Compare Selected</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- compare-box -->
+
+    </main>
+    <!-- main-content -->
+
+
+
+
+    <!-- footer -->
+    <footer class="footer-area">
+        <div class="containers">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy">
+                        <p>Copyright © 2024 Automotiveai.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="trams">
+                        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <a href="#" class="scrolltotop"><i class="bi bi-arrow-up-circle"></i></a>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+    <!-- Js script links-->
+    <script src="{{ url_for('static', filename='js/code.jquery.com_jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.smartmenus.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calendar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

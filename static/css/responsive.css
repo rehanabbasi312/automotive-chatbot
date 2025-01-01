@@ -1,0 +1,530 @@
+/* ****************
+Ratina
+************** */
+
+@media (min-width: 1921px) {
+    .containers {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1920px) {
+    .containers {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1600px) {
+    .containers {
+        width: 1320px;
+        margin: 0 auto;
+    }
+    .comingsoon h1 {
+        font-size: 90px;
+    }
+    .comingsoon p {
+        font-size: 18px;
+    }
+    .comingsoon p span {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .slidermodel {
+        width: 100% !important;
+    }
+    .title h1 {
+        font-size: 60px;
+    }
+    .comingsoon h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .containers {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .cannames ul {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+    .cartitle h1 {
+        font-size: 50px;
+    }
+    .cartitle h3 {
+        font-size: 55px;
+    }
+    .loginsignup {
+        padding: 50px 60px;
+    }
+    .title h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .containers {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .sm-simple>li {
+        border: none;
+        padding-left: 0;
+    }
+    .title h1 {
+        font-size: 45px;
+    }
+    .search-area {
+        padding: 150px 0 50px;
+    }
+    .cannames ul {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .search-area {
+        padding-bottom: 250px !important;
+    }
+    .cartitle h1 {
+        font-size: 40px;
+    }
+    .cartitle h3 {
+        font-size: 45px;
+    }
+    .cartitle p {
+        font-size: 20px;
+    }
+    .detailscon p {
+        font-size: 18px;
+    }
+    .compare-box h4 {
+        font-size: 16px;
+    }
+    .Pricing h2 {
+        font-size: 24px;
+    }
+    .compare-car h3 {
+        font-size: 16px;
+    }
+    .compare-top {
+        padding: 100px 0 0 0;
+    }
+    /* sidemenu */
+    .side-menu .el-menu--collapse {
+        width: 220px;
+        left: 0 !important;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .main-contents {
+        margin-left: 0;
+    }
+    .main-contents.copllaps {
+        margin-left: 0;
+    }
+    .side-menu .el-menu {
+        position: fixed;
+        left: -230px;
+        top: 0;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .dashheader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .copllaps .dashheader {
+        left: 0;
+    }
+    .side-menu .el-menu--collapse .biglogo {
+        display: block;
+    }
+    .side-menu .el-menu--collapse .smalllogo {
+        display: none;
+    }
+    .side-menu .el-menu--collapse .el-menu-item .menuitem {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+    .mobilex {
+        display: block;
+        background: none;
+        position: absolute;
+        top: 8px;
+        right: -12px;
+        z-index: 22;
+        width: 32px;
+    }
+    .pagetitle h2 {
+        font-size: 20px;
+    }
+    .usernames {
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    /* sidemenu */
+    .comingsoon h1 {
+        font-size: 50px;
+    }
+}
+
+
+/* ****************
+Desktop
+************** */
+
+@media (max-width: 1023px) {}
+
+@media (max-width: 991px) {
+    .cannames ul {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .cannames li a {
+        font-size: 16px;
+    }
+    .title h1 {
+        font-size: 45px;
+    }
+    .title p {
+        font-size: 17px;
+    }
+    .copy p {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .trams {
+        text-align: center;
+    }
+    .back a {
+        font-size: 18px;
+    }
+    .items a.cansbtn {
+        font-size: 16px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+    .carprice h3 {
+        font-size: 24px;
+    }
+    .carprice a i {
+        color: #fff;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+    }
+    .pricebox .el-input__inner {
+        font-size: 48px;
+    }
+    .schedulemodal.el-dialog {
+        width: 100%;
+    }
+    .calenderleft .el-input__wrapper {
+        padding: 15px 20px;
+    }
+    .duratio .el-input__wrapper {
+        padding: 0;
+    }
+    .el-input__inner {
+        font-size: 16px;
+    }
+    .el-calendar__title {
+        font-size: 14px;
+    }
+    .el-button-group>.el-button:not(:last-child) {
+        margin-right: 5px;
+    }
+    .calenderleft .el-button {
+        margin: 5px;
+    }
+    .el-calendar-table .el-calendar-day {
+        font-size: 14px;
+    }
+    .modalfrom .el-input__wrapper {
+        padding: 15px 20px;
+    }
+    .el-calendar__header {
+        display: block;
+        padding: 12px 0;
+    }
+    .calenderright {
+        border-radius: 10px;
+    }
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .cusbtn.cancel {
+        margin-bottom: 15px;
+    }
+    .voice button {
+        height: 36px;
+        width: 36px;
+    }
+}
+
+
+/* **************** 
+Tab 
+************** */
+
+@media (max-width: 767px) {
+    .mobileview {
+        display: block;
+    }
+    .desktopview {
+        display: none;
+    }
+    .cannames ul {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    .title h1 {
+        font-size: 36px;
+    }
+    .v-slick-arrow.next {
+        right: -5px;
+        z-index: 2;
+    }
+    .v-slick-arrow.prev {
+        left: -5px;
+        z-index: 2;
+    }
+    .back {
+        text-align: start;
+        margin-bottom: 10px;
+    }
+    .slider-demo-block p {
+        font-size: 14px;
+    }
+    .search-results .row {
+        margin-top: -150px;
+    }
+    .search-area {
+        padding-bottom: 150px !important;
+    }
+    .search-area {
+        padding: 100px 0 50px;
+    }
+    .el-dialog {
+        border-radius: 15px;
+        padding: 15px;
+        width: 100%;
+    }
+    .el-dialog__body h3 {
+        font-size: 20px;
+    }
+    .boxs p {
+        font-size: 16px;
+    }
+    .boxs img {
+        margin-right: 15px;
+    }
+    .boxs {
+        margin-top: 15px;
+    }
+    .cusbtn {
+        font-size: 16px;
+        width: 100%;
+        padding: 15px 15px;
+        cursor: pointer;
+    }
+    .done p {
+        font-size: 18px;
+    }
+    .el-button--small {
+        padding: 5px 6px;
+    }
+    .location p {
+        display: none;
+    }
+    .location {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 0 5px;
+    }
+    .location .form-control {
+        padding: 6px 10px;
+        width: 80px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .navbar-brand img {
+        height: 16px;
+    }
+    .voice button {
+        margin-top: 10px;
+    }
+    .showmore {
+        bottom: 120px;
+    }
+    .loginsignup {
+        padding: 20px 20px;
+        margin-top: 30px;
+    }
+    .loginsignup h2 {
+        font-size: 20px;
+    }
+    .anchorlink {
+        display: none;
+    }
+    .el-date-range-picker__content {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: inherit;
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+    }
+    .el-date-range-picker.has-sidebar {
+        width: 100%;
+    }
+    .el-date-range-picker .el-picker-panel__body {
+        min-width: 100%;
+    }
+    .el-date-range-picker__header div {
+        font-size: 12px;
+    }
+    .el-date-table th {
+        padding: 1px;
+    }
+    .el-date-table td .el-date-table-cell {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: auto;
+        padding: 0px 0;
+    }
+    .el-date-table td .el-date-table-cell .el-date-table-cell__text {
+        font-size: 12px;
+        left: 50%;
+        line-height: 24px;
+    }
+    .el-picker-panel [slot=sidebar],
+    .el-picker-panel__sidebar {
+        border-right: none;
+        bottom: 0;
+        overflow: auto;
+        position: inherit;
+        top: 0;
+        width: 100%;
+    }
+    .el-picker-panel__shortcut {
+        color: #000;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        padding-left: 10px;
+        width: auto;
+        display: inline-block;
+    }
+    .el-picker-panel [slot=sidebar]+.el-picker-panel__body,
+    .el-picker-panel__sidebar+.el-picker-panel__body {
+        margin-left: 0;
+    }
+    .el-date-range-picker__content.is-left {
+        border-right: none;
+    }
+    .deails-slider .v-slick-arrow {
+        top: 50%;
+        width: 30px;
+        height: 30px;
+    }
+    .deails-slider .v-slick-arrow.next {
+        right: 5px;
+    }
+    .deails-slider .v-slick-arrow.prev {
+        left: 5px;
+    }
+    .deails-slider .v-slick-arrow:before {
+        font-size: 20px;
+    }
+    .compare-top .title h3 {
+        font-size: 24px;
+    }
+    .comingsoon h1 {
+        font-size: 40px;
+    }
+    .comingsoon p {
+        font-size: 16px;
+    }
+    .comingsoon p span {
+        font-size: 18px;
+    }
+    .subscribe {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .pricerage .input-group {
+        display: block;
+        width: 160px;
+        padding: 0 5px;
+    }
+    .pricerage .form-control {
+        font-size: 12px;
+        padding: 0;
+        line-height: 1;
+    }
+    .doller1 {
+        font-size: 14px;
+    }
+    .doller2 {
+        font-size: 14px;
+    }
+    .pricerage {
+        border-radius: 14px;
+    }
+    .duratio li {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+}
+
+
+/* **************** 
+Mobile 
+************** */
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}

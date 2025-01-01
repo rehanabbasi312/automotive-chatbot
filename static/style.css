@@ -1,0 +1,296 @@
+/* General body and layout styles */
+body, html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #343541;
+}
+
+.app-container {
+    display: flex;
+    height: calc(100vh - 37px);
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar styling for the header and buttons */
+.footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.sidebar-header {
+    margin-bottom: 20px;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.sidebar h1 i {
+    margin-right: 10px;
+}
+
+.new-chat-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #343541;
+    color: #ffffff;
+    border: 1px solid #565869;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.new-chat-btn:hover {
+    background-color: #969697;
+}
+
+/* Chat container and history styles */
+.chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    padding: 10px;
+    border-bottom: 1px solid #565869;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-item:hover {
+    background-color: #40414f;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.message-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/static/img/home-bg.png');
+
+}
+
+/* General message styling */
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.message-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.message.assistant .message-icon {
+    color: #555555;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.user .message-content {
+    flex-direction: row-reverse;
+    background-color: #007bff81;
+    color: #ffffff;
+}
+
+/* Consistent card styling for both image and text cards */
+.message-content,
+.message.card .card-content {
+    background-color: #f0f0f0;  /* Light gray background */
+    border-radius: 12px;        /* Rounded corners */
+    padding: 15px;              /* Padding inside the card */
+    margin-bottom: 10px;        /* Space between each card */
+    margin-bottom: 20px; /* Add spacing between cards to ensure visibility */
+    width: auto;   
+    max-width: 300px;           /* Consistent width for all cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    word-wrap: break-word;      /* Ensure text wraps within the card */
+    overflow: hidden;           /* Hide overflowing content */
+    text-align: left;         /* Center align content inside card */
+}
+
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the start */
+    margin-bottom: 20px;      /* Ensure enough space between cards */
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;              /* Image should take up full card width */
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;      /* Ensure entire image fits within bounds */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.card-text {
+    font-size: 14px;
+    color: #333;
+    text-align: left; /* Text aligned to the left */
+}
+
+
+/* Clear history button styling */
+.clear-history-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF3B30;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+.clear-history-btn:hover {
+    background-color: #FF453A;
+}
+
+
+
+
+
+/* User Info Styling */
+.user-info h4 {
+    margin-left: 10px; /* Adjust the margin for the text */
+    color: white; /* Ensure the text is visible */
+    font-size: 16px; /* Adjust the size of the email text */
+    display: flex;
+    align-items: center;
+}
+
+.user-info .fas {
+    margin-right: 10px; /* Add space between the icon and the text */
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Divider Styling */
+.divider {
+    border: 0;
+    height: 1px;
+    background: white; /* Thin white line */
+    margin: 10px 0; /* Add some spacing around the line */
+    opacity: 0.5; /* Slight transparency for better look */
+}
+
+
+/* Input area styling */
+.input-container {
+    display: flex;
+    padding: 30px;
+    background-color: #e6e6e6;
+    border-top: 1px solid #999999;
+    position: sticky;
+    bottom: 0;
+    background-image: url('/static/img/home-bg.png');
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px 16px;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #007AFF;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
+}
+
+.send-btn {
+    margin-left: 10px;
+    padding: 12px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #007AFF;
+    display: none;
+}
+
+.car-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.car-link:hover {
+    color: #0056b3;
+}
+
